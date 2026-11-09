@@ -128,6 +128,8 @@ npm test
 
 本地开发安装（link 方式）：把本目录的绝对路径交给 DSH 的插件管理器（`plugin_manager` 的 `install_bundle`）即可。link 安装时 Node 按真实路径解析模块，本插件不依赖 dsh 安装目录里的包，因此无需额外依赖。
 
+发布流程（npm + GitHub，含认证、命名规则与常见报错）见 **[RELEASING.md](RELEASING.md)**。
+
 ## 许可
 
 [MIT](LICENSE)。与 DeepSeek 官方无关（not affiliated with DeepSeek）。
