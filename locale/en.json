@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DSH Update",
+    "description": "Shows an Update button in the Session header’s top-right corner when a newer dsh is published. One click installs it with npm and restarts dsh."
+  }
+}

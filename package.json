@@ -1,0 +1,69 @@
+{
+  "name": "@marvinlee2011/dsh-auto-update",
+  "version": "1.0.0",
+  "description": "Update button for the DeepSeek Harness (dsh): when a newer dsh is on the registry, a top-right Update pill installs it with npm and restarts dsh.",
+  "type": "module",
+  "license": "MIT",
+  "author": "marvinlee2011",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lee-nihao2333/dsh-auto-update.git"
+  },
+  "homepage": "https://github.com/lee-nihao2333/dsh-auto-update#readme",
+  "bugs": {
+    "url": "https://github.com/lee-nihao2333/dsh-auto-update/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "cordis-plugin",
+    "update",
+    "updater",
+    "plugin"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/*.js",
+    "lib/*.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "node test/update.test.mjs && node test/updater.test.mjs && node test/routes.test.mjs && node test/restart.test.mjs && node test/plugin.test.mjs",
+    "prepublishOnly": "npm test"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

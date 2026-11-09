@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DSH update">
+  <rect width="64" height="64" rx="14" fill="#247bbf"/>
+  <path d="M32 14v23" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M21 27l11 11 11-11" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M18 47h28" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+</svg>
